@@ -2,11 +2,12 @@
 //  RomanNumeralCalculatorTests.swift
 //  RomanNumeralCalculatorTests
 //
-//  Created by Jarrod Parkes on 11/29/16.
-//  Copyright © 2016 buddybuild. All rights reserved.
+//  Created by Eric Tran on 2017-10-17.
+//  Copyright © 2017 buddybuild. All rights reserved.
 //
 
 import XCTest
+@testable import RomanNumeralCalculator
 
 class RomanNumeralCalculatorTests: XCTestCase {
     
@@ -18,6 +19,13 @@ class RomanNumeralCalculatorTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testToRoman(){
+        XCTAssertEqual(toRoman(1), "I")
+        XCTAssertEqual(toRoman(2), "II")
+        XCTAssertEqual(toRoman(4), "IV")
+        
     }
     
     func testExample() {
